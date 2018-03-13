@@ -1,0 +1,10 @@
+{% extends 'demoapp/base.html' %}
+
+{% block title %}
+DemoApp | Success
+{% endblock %}
+
+{% block content %}
+<a href="{% url 'demoapp:index' %}">&ltBack</a><br><br>
+<h2>Hello, "{{ fname }} {{ lname }}!"</h2>
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends 'demoapp/base.html' %}
+
+{% block title %}
+DemoApp | Index Page
+{% endblock %}
+
+{% block content %}
+<h1>Hello World!</h1>
+<form action="{% url 'demoapp:success' %}" method="POST">
+    {% csrf_token %}
+    <input type="text" name="first_name"/>
+    <input type="text" name="last_name"/>
+    <input type="submit" value="Save"/> <!--TO Submit form, type="submit" is important-->
+</form>
+{% endblock %}
